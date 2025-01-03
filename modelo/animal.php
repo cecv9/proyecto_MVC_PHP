@@ -23,6 +23,16 @@ class Animal extends crud{
         $this->crear("id,nombre,raza,sexo,color,edad", "?,?,?,?,?,?" ,[$this->id,$this->nombre,$this->raza,$this->sexo,$this->color,$this->edad]);
     }
 
+    public function actualizar(){
+
+        $this->modificar("nombre=?,raza=?,sexo=?,color=?,edad=?",[$this->nombre,$this->raza,$this->sexo,$this->color,$this->edad,$this->id]);
+    }
+
+    public function eliminar(){
+
+        $this->delete($this->id);
+    }
+
 
 
 

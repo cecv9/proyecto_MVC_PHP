@@ -1,6 +1,6 @@
 <?php 
 
-require_once("conexion.php");
+require_once("core/conexion.php");
 
 class crud extends conexion{
     private   $pdo;
@@ -50,7 +50,7 @@ class crud extends conexion{
 
 
     public function crear(string $columnas, string $marcadores, array $datos){
-        
+         
      $statement=$this->pdo->prepare("INSERT INTO $this->tabla ($columnas) VALUES ($marcadores)");
      $statement->execute($datos);
 
