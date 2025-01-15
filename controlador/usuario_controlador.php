@@ -30,14 +30,14 @@ class UsuarioControlador extends Usuario{
 
         public function guardar(){
 
-            $this->id=$_REQUEST["id"];
+            $this->id=$_POST["id"];
             $this->nombre=$_REQUEST["nombre"];
             $this->apellido=$_REQUEST["apellido"];
             $this->telefono=$_REQUEST["telefono"];
             $this->edad=$_REQUEST["edad"];
             $this->id>0?$this->actualizar():$this->insertar();
             header("Location:index.php");
-
+            exit();
         }
 
 
