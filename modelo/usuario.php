@@ -4,6 +4,15 @@ require_once("core/crud.php");
 class Usuario extends crud{
 
 
+    /**
+     * Constructor for the Usuario class.
+     *
+     * @param int $id The ID of the user. Default is 0.
+     * @param string $nombre The first name of the user. Default is an empty string.
+     * @param string $apellido The last name of the user. Default is an empty string.
+     * @param string $telefono The phone number of the user. Default is an empty string.
+     * @param int $edad The age of the user. Default is 0.
+     */
     public function __construct(
 
         public int $id=0,
